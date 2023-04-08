@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --section1: hsl(31, 77%, 52%);
+  --section2: hsl(184, 100%, 22%);
+  --section3: hsl(179, 100%, 13%);
+}
+
+html{
+    height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Lexend Deca", sans-serif;
+  min-height: 100%;
+  align-items: center;
+  background: hsl(0, 0%, 95%)  ;
+}
+
+main {
+  display: flex;
+  max-width: 900px;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+main section {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  flex: 1 1 0;
+  color: hsl(0, 0%, 95%);
+  justify-content: space-between;
+}
+
+main section#sedan {
+  background: var(--section1);
+  --sectionColor: var(--section1);
+}
+
+main section#suv {
+  background: var(--section2);
+  --sectionColor: var(--section2);
+}
+
+main section#lux {
+  background: var(--section3);
+  --sectionColor: var(--section3);
+}
+
+section .text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section h1 {
+  text-transform: uppercase;
+  font-family: Big Shoulders Display;
+  font-weight: 700;
+  font-size:2rem;
+  color:hsl(0, 0%, 95%);
+}
+
+section p {
+  font-weight: 400;
+  color:hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5;
+}
+
+section button {
+  color: var(--sectionColor);
+  background: hsl(0, 0%, 95%);
+  padding: 1em 2em;
+  border-radius: 10em;
+  border: 2px solid hsl(0, 0%, 95%);
+  cursor: pointer;
+  margin-top: 4rem;
+  font-weight: 400;
+  font-family: Lexend Deca;
+}
+
+section button:hover {
+  background: transparent;
+  color: hsl(0, 0%, 95%);
+}
+
+
+@media screen and (max-width:700px) {
+    main{
+        flex-direction: column;
+        margin:3rem 1rem
+    }
+
+    section button{
+        margin:0;
+    }
+}
